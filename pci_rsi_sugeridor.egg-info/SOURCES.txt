@@ -1,0 +1,10 @@
+core.py
+io.py
+setup.py
+pci_rsi_sugeridor.egg-info/PKG-INFO
+pci_rsi_sugeridor.egg-info/SOURCES.txt
+pci_rsi_sugeridor.egg-info/dependency_links.txt
+pci_rsi_sugeridor.egg-info/entry_points.txt
+pci_rsi_sugeridor.egg-info/requires.txt
+pci_rsi_sugeridor.egg-info/top_level.txt
+tests/test_normalizacion.py
