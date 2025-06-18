@@ -1,24 +1,39 @@
-[build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+name: Python CI
 
-# Metadata for PEP 621 (optional, pip will fallback to setup.py)
-[project]
-name = "pci_rsi_sugeridor"
-version = "0.1.0"
-description = "CLI y librería para sugerir asignaciones de PCI/RSI ZN-ZR con pool virtual"
-authors = [ { name = "Carlos Álvarez Corredor", email = "carlos.alvarez@circet.es" } ]
-readme = "README.md"
-requires-python = ">=3.8"
-dependencies = [
-  "pandas>=1.0",
-  "openpyxl>=3.0",
-  "tabulate>=0.8"
-]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-[project.optional-dependencies]
-dev = [
-  "pytest>=7.0",
-  "black>=22.0",
-  "flake8>=4.0"
-]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
+
+      - name: Lint with Black
+        run: black --check .
+
+      - name: Lint with Flake8
+        run: flake8
+
+      - name: Run tests
+        run: pytest -q
