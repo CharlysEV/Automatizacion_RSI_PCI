@@ -1,0 +1,35 @@
+﻿2025-06-18T10:00:37.1661750Z Current runner version: '2.325.0'
+2025-06-18T10:00:37.1688476Z ##[group]Operating System
+2025-06-18T10:00:37.1689236Z Ubuntu
+2025-06-18T10:00:37.1689815Z 24.04.2
+2025-06-18T10:00:37.1690255Z LTS
+2025-06-18T10:00:37.1690724Z ##[endgroup]
+2025-06-18T10:00:37.1691277Z ##[group]Runner Image
+2025-06-18T10:00:37.1691843Z Image: ubuntu-24.04
+2025-06-18T10:00:37.1692365Z Version: 20250609.1.0
+2025-06-18T10:00:37.1693375Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250609.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-18T10:00:37.1694745Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250609.1
+2025-06-18T10:00:37.1695925Z ##[endgroup]
+2025-06-18T10:00:37.1696517Z ##[group]Runner Image Provisioner
+2025-06-18T10:00:37.1697201Z 2.0.437.1
+2025-06-18T10:00:37.1697629Z ##[endgroup]
+2025-06-18T10:00:37.1698718Z ##[group]GITHUB_TOKEN Permissions
+2025-06-18T10:00:37.1700486Z Contents: read
+2025-06-18T10:00:37.1701057Z Metadata: read
+2025-06-18T10:00:37.1701651Z Packages: read
+2025-06-18T10:00:37.1702397Z ##[endgroup]
+2025-06-18T10:00:37.1704394Z Secret source: Actions
+2025-06-18T10:00:37.1705229Z Prepare workflow directory
+2025-06-18T10:00:37.2086423Z Prepare all required actions
+2025-06-18T10:00:37.2124015Z Getting action download info
+2025-06-18T10:00:37.7210121Z ##[group]Download immutable action package 'actions/checkout@v3'
+2025-06-18T10:00:37.7211224Z Version: 3.6.0
+2025-06-18T10:00:37.7212342Z Digest: sha256:942562b9c7d4b1f2557f1da21f4d3eb4eb4fd01f2ad78b2a6e187d1b193e0a0f
+2025-06-18T10:00:37.7214053Z Source commit SHA: f43a0e5ff2bd294095638e18286ca9a3d1956744
+2025-06-18T10:00:37.7214796Z ##[endgroup]
+2025-06-18T10:00:37.8166689Z ##[group]Download immutable action package 'actions/setup-python@v4'
+2025-06-18T10:00:37.8167676Z Version: 4.9.1
+2025-06-18T10:00:37.8168453Z Digest: sha256:f03e505388af670b5a108629e0ba26befc08d5c62b41f46146a45fe29ae509a5
+2025-06-18T10:00:37.8169458Z Source commit SHA: 7f4fc3e22c37d6ff65e88745f38bd3157c663f7c
+2025-06-18T10:00:37.8170264Z ##[endgroup]
+2025-06-18T10:00:38.9980879Z Complete job name: test (3.8)

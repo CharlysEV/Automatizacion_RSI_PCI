@@ -1,0 +1,226 @@
+﻿2025-06-18T10:00:37.1807995Z Current runner version: '2.325.0'
+2025-06-18T10:00:37.1834094Z ##[group]Operating System
+2025-06-18T10:00:37.1834850Z Ubuntu
+2025-06-18T10:00:37.1835734Z 24.04.2
+2025-06-18T10:00:37.1836201Z LTS
+2025-06-18T10:00:37.1836675Z ##[endgroup]
+2025-06-18T10:00:37.1837272Z ##[group]Runner Image
+2025-06-18T10:00:37.1837862Z Image: ubuntu-24.04
+2025-06-18T10:00:37.1838397Z Version: 20250609.1.0
+2025-06-18T10:00:37.1839438Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250609.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-18T10:00:37.1840830Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250609.1
+2025-06-18T10:00:37.1841705Z ##[endgroup]
+2025-06-18T10:00:37.1842261Z ##[group]Runner Image Provisioner
+2025-06-18T10:00:37.1842891Z 2.0.437.1
+2025-06-18T10:00:37.1843322Z ##[endgroup]
+2025-06-18T10:00:37.1844431Z ##[group]GITHUB_TOKEN Permissions
+2025-06-18T10:00:37.1846396Z Contents: read
+2025-06-18T10:00:37.1846911Z Metadata: read
+2025-06-18T10:00:37.1847722Z Packages: read
+2025-06-18T10:00:37.1848274Z ##[endgroup]
+2025-06-18T10:00:37.1850313Z Secret source: Actions
+2025-06-18T10:00:37.1850979Z Prepare workflow directory
+2025-06-18T10:00:37.2196132Z Prepare all required actions
+2025-06-18T10:00:37.2233870Z Getting action download info
+2025-06-18T10:00:47.6771907Z ##[group]Download immutable action package 'actions/checkout@v3'
+2025-06-18T10:00:47.6773201Z Version: 3.6.0
+2025-06-18T10:00:47.6775064Z Digest: sha256:942562b9c7d4b1f2557f1da21f4d3eb4eb4fd01f2ad78b2a6e187d1b193e0a0f
+2025-06-18T10:00:47.6777011Z Source commit SHA: f43a0e5ff2bd294095638e18286ca9a3d1956744
+2025-06-18T10:00:47.6778064Z ##[endgroup]
+2025-06-18T10:00:47.7596720Z ##[group]Download immutable action package 'actions/setup-python@v4'
+2025-06-18T10:00:47.7598297Z Version: 4.9.1
+2025-06-18T10:00:47.7599808Z Digest: sha256:f03e505388af670b5a108629e0ba26befc08d5c62b41f46146a45fe29ae509a5
+2025-06-18T10:00:47.7601965Z Source commit SHA: 7f4fc3e22c37d6ff65e88745f38bd3157c663f7c
+2025-06-18T10:00:47.7603352Z ##[endgroup]
+2025-06-18T10:00:48.2267698Z Complete job name: test (3.10)
+2025-06-18T10:00:48.3036722Z ##[group]Run actions/checkout@v3
+2025-06-18T10:00:48.3038031Z with:
+2025-06-18T10:00:48.3038863Z   repository: CharlysEV/Automatizacion_RSI_PCI
+2025-06-18T10:00:48.3040228Z   token: ***
+2025-06-18T10:00:48.3040946Z   ssh-strict: true
+2025-06-18T10:00:48.3041727Z   persist-credentials: true
+2025-06-18T10:00:48.3042611Z   clean: true
+2025-06-18T10:00:48.3043377Z   sparse-checkout-cone-mode: true
+2025-06-18T10:00:48.3044329Z   fetch-depth: 1
+2025-06-18T10:00:48.3045067Z   fetch-tags: false
+2025-06-18T10:00:48.3046024Z   lfs: false
+2025-06-18T10:00:48.3046718Z   submodules: false
+2025-06-18T10:00:48.3047504Z   set-safe-directory: true
+2025-06-18T10:00:48.3048646Z ##[endgroup]
+2025-06-18T10:00:48.4557945Z Syncing repository: CharlysEV/Automatizacion_RSI_PCI
+2025-06-18T10:00:48.4562147Z ##[group]Getting Git version info
+2025-06-18T10:00:48.4563879Z Working directory is '/home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI'
+2025-06-18T10:00:48.4566436Z [command]/usr/bin/git version
+2025-06-18T10:00:48.4594513Z git version 2.49.0
+2025-06-18T10:00:48.4625409Z ##[endgroup]
+2025-06-18T10:00:48.4643366Z Temporarily overriding HOME='/home/runner/work/_temp/7ce809f0-066f-45f0-8f45-dbc1f7517fd5' before making global git config changes
+2025-06-18T10:00:48.4648354Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-18T10:00:48.4652299Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI
+2025-06-18T10:00:48.4685115Z Deleting the contents of '/home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI'
+2025-06-18T10:00:48.4689285Z ##[group]Initializing the repository
+2025-06-18T10:00:48.4693152Z [command]/usr/bin/git init /home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI
+2025-06-18T10:00:48.4750776Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-18T10:00:48.4753022Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-18T10:00:48.4755734Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-18T10:00:48.4758057Z hint:
+2025-06-18T10:00:48.4759567Z hint: 	git config --global init.defaultBranch <name>
+2025-06-18T10:00:48.4761610Z hint:
+2025-06-18T10:00:48.4763358Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-18T10:00:48.4766628Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-18T10:00:48.4768969Z hint:
+2025-06-18T10:00:48.4770074Z hint: 	git branch -m <name>
+2025-06-18T10:00:48.4772410Z Initialized empty Git repository in /home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI/.git/
+2025-06-18T10:00:48.4776668Z [command]/usr/bin/git remote add origin https://github.com/CharlysEV/Automatizacion_RSI_PCI
+2025-06-18T10:00:48.4799133Z ##[endgroup]
+2025-06-18T10:00:48.4801364Z ##[group]Disabling automatic garbage collection
+2025-06-18T10:00:48.4803483Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-18T10:00:48.4830571Z ##[endgroup]
+2025-06-18T10:00:48.4832696Z ##[group]Setting up auth
+2025-06-18T10:00:48.4836915Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-18T10:00:48.4866848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-18T10:00:48.5141050Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-18T10:00:48.5168571Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-18T10:00:48.5386826Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-18T10:00:48.5418671Z ##[endgroup]
+2025-06-18T10:00:48.5421325Z ##[group]Fetching the repository
+2025-06-18T10:00:48.5429394Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +cd21ea4ed4ef938f2209d90243a3932ed562df42:refs/remotes/origin/main
+2025-06-18T10:00:48.9567553Z remote: Enumerating objects: 23, done.        
+2025-06-18T10:00:48.9569043Z remote: Counting objects:   4% (1/23)        
+2025-06-18T10:00:48.9569638Z remote: Counting objects:   8% (2/23)        
+2025-06-18T10:00:48.9570067Z remote: Counting objects:  13% (3/23)        
+2025-06-18T10:00:48.9570548Z remote: Counting objects:  17% (4/23)        
+2025-06-18T10:00:48.9571092Z remote: Counting objects:  21% (5/23)        
+2025-06-18T10:00:48.9571623Z remote: Counting objects:  26% (6/23)        
+2025-06-18T10:00:48.9572163Z remote: Counting objects:  30% (7/23)        
+2025-06-18T10:00:48.9572683Z remote: Counting objects:  34% (8/23)        
+2025-06-18T10:00:48.9573202Z remote: Counting objects:  39% (9/23)        
+2025-06-18T10:00:48.9573788Z remote: Counting objects:  43% (10/23)        
+2025-06-18T10:00:48.9574193Z remote: Counting objects:  47% (11/23)        
+2025-06-18T10:00:48.9574523Z remote: Counting objects:  52% (12/23)        
+2025-06-18T10:00:48.9574862Z remote: Counting objects:  56% (13/23)        
+2025-06-18T10:00:48.9575457Z remote: Counting objects:  60% (14/23)        
+2025-06-18T10:00:48.9575914Z remote: Counting objects:  65% (15/23)        
+2025-06-18T10:00:48.9576239Z remote: Counting objects:  69% (16/23)        
+2025-06-18T10:00:48.9576576Z remote: Counting objects:  73% (17/23)        
+2025-06-18T10:00:48.9576905Z remote: Counting objects:  78% (18/23)        
+2025-06-18T10:00:48.9577224Z remote: Counting objects:  82% (19/23)        
+2025-06-18T10:00:48.9577553Z remote: Counting objects:  86% (20/23)        
+2025-06-18T10:00:48.9577874Z remote: Counting objects:  91% (21/23)        
+2025-06-18T10:00:48.9578201Z remote: Counting objects:  95% (22/23)        
+2025-06-18T10:00:48.9578857Z remote: Counting objects: 100% (23/23)        
+2025-06-18T10:00:48.9579214Z remote: Counting objects: 100% (23/23), done.        
+2025-06-18T10:00:48.9579583Z remote: Compressing objects:   5% (1/17)        
+2025-06-18T10:00:48.9579925Z remote: Compressing objects:  11% (2/17)        
+2025-06-18T10:00:48.9580271Z remote: Compressing objects:  17% (3/17)        
+2025-06-18T10:00:48.9580665Z remote: Compressing objects:  23% (4/17)        
+2025-06-18T10:00:48.9581065Z remote: Compressing objects:  29% (5/17)        
+2025-06-18T10:00:48.9581429Z remote: Compressing objects:  35% (6/17)        
+2025-06-18T10:00:48.9581752Z remote: Compressing objects:  41% (7/17)        
+2025-06-18T10:00:48.9582074Z remote: Compressing objects:  47% (8/17)        
+2025-06-18T10:00:48.9582387Z remote: Compressing objects:  52% (9/17)        
+2025-06-18T10:00:48.9582712Z remote: Compressing objects:  58% (10/17)        
+2025-06-18T10:00:48.9583038Z remote: Compressing objects:  64% (11/17)        
+2025-06-18T10:00:48.9757914Z remote: Compressing objects:  70% (12/17)        
+2025-06-18T10:00:48.9758433Z remote: Compressing objects:  76% (13/17)        
+2025-06-18T10:00:48.9758864Z remote: Compressing objects:  82% (14/17)        
+2025-06-18T10:00:48.9759278Z remote: Compressing objects:  88% (15/17)        
+2025-06-18T10:00:48.9759707Z remote: Compressing objects:  94% (16/17)        
+2025-06-18T10:00:48.9760180Z remote: Compressing objects: 100% (17/17)        
+2025-06-18T10:00:48.9760637Z remote: Compressing objects: 100% (17/17), done.        
+2025-06-18T10:00:48.9833670Z remote: Total 23 (delta 0), reused 22 (delta 0), pack-reused 0 (from 0)        
+2025-06-18T10:00:48.9937154Z From https://github.com/CharlysEV/Automatizacion_RSI_PCI
+2025-06-18T10:00:48.9937920Z  * [new ref]         cd21ea4ed4ef938f2209d90243a3932ed562df42 -> origin/main
+2025-06-18T10:00:48.9968777Z ##[endgroup]
+2025-06-18T10:00:48.9969215Z ##[group]Determining the checkout info
+2025-06-18T10:00:48.9971176Z ##[endgroup]
+2025-06-18T10:00:48.9971852Z ##[group]Checking out the ref
+2025-06-18T10:00:48.9975776Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-06-18T10:00:49.0026707Z Switched to a new branch 'main'
+2025-06-18T10:00:49.0029234Z branch 'main' set up to track 'origin/main'.
+2025-06-18T10:00:49.0035859Z ##[endgroup]
+2025-06-18T10:00:49.0069119Z [command]/usr/bin/git log -1 --format='%H'
+2025-06-18T10:00:49.0091630Z 'cd21ea4ed4ef938f2209d90243a3932ed562df42'
+2025-06-18T10:00:49.0309365Z ##[group]Run actions/setup-python@v4
+2025-06-18T10:00:49.0309700Z with:
+2025-06-18T10:00:49.0309916Z   python-version: 3.10
+2025-06-18T10:00:49.0310168Z   check-latest: false
+2025-06-18T10:00:49.0310528Z   token: ***
+2025-06-18T10:00:49.0310758Z   update-environment: true
+2025-06-18T10:00:49.0311015Z   allow-prereleases: false
+2025-06-18T10:00:49.0311257Z ##[endgroup]
+2025-06-18T10:00:49.1969664Z ##[group]Installed versions
+2025-06-18T10:00:49.2037357Z Successfully set up CPython (3.10.18)
+2025-06-18T10:00:49.2038225Z ##[endgroup]
+2025-06-18T10:00:49.2167166Z ##[group]Run python -m pip install --upgrade pip
+2025-06-18T10:00:49.2167845Z [36;1mpython -m pip install --upgrade pip[0m
+2025-06-18T10:00:49.2168385Z [36;1mpip install -e .[dev][0m
+2025-06-18T10:00:49.2306492Z shell: /usr/bin/bash -e {0}
+2025-06-18T10:00:49.2307002Z env:
+2025-06-18T10:00:49.2307520Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-06-18T10:00:49.2308362Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-06-18T10:00:49.2309169Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-06-18T10:00:49.2309928Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-06-18T10:00:49.2310673Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-06-18T10:00:49.2311454Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-06-18T10:00:49.2312066Z ##[endgroup]
+2025-06-18T10:00:49.7804084Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
+2025-06-18T10:00:50.4242388Z Obtaining file:///home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI
+2025-06-18T10:00:50.5722333Z ERROR: Exception:
+2025-06-18T10:00:50.5722860Z Traceback (most recent call last):
+2025-06-18T10:00:50.5731225Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 105, in _run_wrapper
+2025-06-18T10:00:50.5731939Z     status = _inner_run()
+2025-06-18T10:00:50.5732618Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 96, in _inner_run
+2025-06-18T10:00:50.5733242Z     return self.run(options, args)
+2025-06-18T10:00:50.5733863Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 68, in wrapper
+2025-06-18T10:00:50.5734461Z     return func(self, options, args)
+2025-06-18T10:00:50.5735089Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/commands/install.py", line 387, in run
+2025-06-18T10:00:50.5735910Z     requirement_set = resolver.resolve(
+2025-06-18T10:00:50.5736606Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/resolver.py", line 77, in resolve
+2025-06-18T10:00:50.5737351Z     collected = self.factory.collect_root_requirements(root_reqs)
+2025-06-18T10:00:50.5738206Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/factory.py", line 545, in collect_root_requirements
+2025-06-18T10:00:50.5738966Z     reqs = list(
+2025-06-18T10:00:50.5739747Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/factory.py", line 501, in _make_requirements_from_install_req
+2025-06-18T10:00:50.5740505Z     cand = self._make_base_candidate_from_link(
+2025-06-18T10:00:50.5741318Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/factory.py", line 212, in _make_base_candidate_from_link
+2025-06-18T10:00:50.5742088Z     self._editable_candidate_cache[link] = EditableCandidate(
+2025-06-18T10:00:50.5742811Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 331, in __init__
+2025-06-18T10:00:50.5743429Z     super().__init__(
+2025-06-18T10:00:50.5744051Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 159, in __init__
+2025-06-18T10:00:50.5744656Z     self.dist = self._prepare()
+2025-06-18T10:00:50.5745551Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 236, in _prepare
+2025-06-18T10:00:50.5746202Z     dist = self._prepare_distribution()
+2025-06-18T10:00:50.5747215Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 341, in _prepare_distribution
+2025-06-18T10:00:50.5748144Z     return self._factory.preparer.prepare_editable_requirement(self._ireq)
+2025-06-18T10:00:50.5749011Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/operations/prepare.py", line 703, in prepare_editable_requirement
+2025-06-18T10:00:50.5749659Z     dist = _get_prepared_distribution(
+2025-06-18T10:00:50.5750446Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/operations/prepare.py", line 71, in _get_prepared_distribution
+2025-06-18T10:00:50.5751148Z     abstract_dist.prepare_distribution_metadata(
+2025-06-18T10:00:50.5751857Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/distributions/sdist.py", line 39, in prepare_distribution_metadata
+2025-06-18T10:00:50.5752481Z     self.req.load_pyproject_toml()
+2025-06-18T10:00:50.5753120Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/req/req_install.py", line 512, in load_pyproject_toml
+2025-06-18T10:00:50.5753883Z     pyproject_toml_data = load_pyproject_toml(
+2025-06-18T10:00:50.5754508Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_internal/pyproject.py", line 70, in load_pyproject_toml
+2025-06-18T10:00:50.5755105Z     pp_toml = tomllib.loads(f.read())
+2025-06-18T10:00:50.5755922Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_vendor/tomli/_parser.py", line 180, in loads
+2025-06-18T10:00:50.5756499Z     pos = key_value_rule(src, pos, out, header, parse_float)
+2025-06-18T10:00:50.5757140Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_vendor/tomli/_parser.py", line 408, in key_value_rule
+2025-06-18T10:00:50.5757790Z     pos, key, value = parse_key_value_pair(src, pos, parse_float, nest_lvl=0)
+2025-06-18T10:00:50.5758494Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_vendor/tomli/_parser.py", line 451, in parse_key_value_pair
+2025-06-18T10:00:50.5759117Z     pos, value = parse_value(src, pos, parse_float, nest_lvl)
+2025-06-18T10:00:50.5759737Z   File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pip/_vendor/tomli/_parser.py", line 745, in parse_value
+2025-06-18T10:00:50.5760333Z     raise TOMLDecodeError("Invalid value", src, pos)
+2025-06-18T10:00:50.5760792Z pip._vendor.tomli._parser.TOMLDecodeError: Invalid value (at line 6, column 17)
+2025-06-18T10:00:50.6106587Z ##[error]Process completed with exit code 2.
+2025-06-18T10:00:50.6212776Z Post job cleanup.
+2025-06-18T10:00:50.6987002Z [command]/usr/bin/git version
+2025-06-18T10:00:50.7021796Z git version 2.49.0
+2025-06-18T10:00:50.7065399Z Temporarily overriding HOME='/home/runner/work/_temp/6e965e75-1ce4-42d8-ac3d-6e8f9e64ff7a' before making global git config changes
+2025-06-18T10:00:50.7066797Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-18T10:00:50.7070742Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI
+2025-06-18T10:00:50.7101862Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-18T10:00:50.7132635Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-18T10:00:50.7359436Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-18T10:00:50.7379154Z http.https://github.com/.extraheader
+2025-06-18T10:00:50.7390551Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-18T10:00:50.7419644Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-18T10:00:50.7739449Z Cleaning up orphan processes

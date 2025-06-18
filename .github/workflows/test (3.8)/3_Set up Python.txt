@@ -1,0 +1,36 @@
+﻿2025-06-18T10:00:39.8152575Z ##[group]Run actions/setup-python@v4
+2025-06-18T10:00:39.8152940Z with:
+2025-06-18T10:00:39.8153155Z   python-version: 3.8
+2025-06-18T10:00:39.8153392Z   check-latest: false
+2025-06-18T10:00:39.8153780Z   token: ***
+2025-06-18T10:00:39.8154001Z   update-environment: true
+2025-06-18T10:00:39.8154250Z   allow-prereleases: false
+2025-06-18T10:00:39.8154539Z ##[endgroup]
+2025-06-18T10:00:39.9862132Z ##[group]Installed versions
+2025-06-18T10:00:39.9916169Z Version 3.8 was not found in the local cache
+2025-06-18T10:00:40.5051533Z Version 3.8 is available for downloading
+2025-06-18T10:00:40.5053386Z Download from "https://github.com/actions/python-versions/releases/download/3.8.18-12303122501/python-3.8.18-linux-24.04-x64.tar.gz"
+2025-06-18T10:00:41.4029911Z Extract downloaded archive
+2025-06-18T10:00:41.4160851Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/f9721f5d-f288-41fe-994a-e6d8e61cc9da -f /home/runner/work/_temp/7def95a1-8182-47e1-b144-5499cf46587a
+2025-06-18T10:00:42.7232395Z Execute installation script
+2025-06-18T10:00:42.7324434Z Check if Python hostedtoolcache folder exist...
+2025-06-18T10:00:42.7325788Z Create Python 3.8.18 folder
+2025-06-18T10:00:42.7338494Z Copy Python binaries to hostedtoolcache folder
+2025-06-18T10:00:43.2027369Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2025-06-18T10:00:43.2071752Z Upgrading pip...
+2025-06-18T10:00:44.9287504Z Looking in links: /tmp/tmpaze6_7mj
+2025-06-18T10:00:44.9291814Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (56.0.0)
+2025-06-18T10:00:44.9297528Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (23.0.1)
+2025-06-18T10:00:46.0112537Z Collecting pip
+2025-06-18T10:00:46.0757505Z Downloading pip-25.0.1-py3-none-any.whl (1.8 MB)
+2025-06-18T10:00:46.1519725Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 25.1 MB/s eta 0:00:00
+2025-06-18T10:00:46.1520300Z 
+2025-06-18T10:00:46.1861504Z Installing collected packages: pip
+2025-06-18T10:00:46.1863124Z Attempting uninstall: pip
+2025-06-18T10:00:46.1869567Z Found existing installation: pip 23.0.1
+2025-06-18T10:00:46.3707082Z Uninstalling pip-23.0.1:
+2025-06-18T10:00:46.3780071Z Successfully uninstalled pip-23.0.1
+2025-06-18T10:00:47.0939913Z Successfully installed pip-25.0.1
+2025-06-18T10:00:47.1413351Z Create complete file
+2025-06-18T10:00:47.1472937Z Successfully set up CPython (3.8.18)
+2025-06-18T10:00:47.1474619Z ##[endgroup]

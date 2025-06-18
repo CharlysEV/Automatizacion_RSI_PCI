@@ -1,0 +1,11 @@
+﻿2025-06-18T10:00:38.0795579Z ##[group]Run actions/setup-python@v4
+2025-06-18T10:00:38.0796479Z with:
+2025-06-18T10:00:38.0797159Z   python-version: 3.9
+2025-06-18T10:00:38.0797915Z   check-latest: false
+2025-06-18T10:00:38.0798793Z   token: ***
+2025-06-18T10:00:38.0799485Z   update-environment: true
+2025-06-18T10:00:38.0800233Z   allow-prereleases: false
+2025-06-18T10:00:38.0800984Z ##[endgroup]
+2025-06-18T10:00:38.2490417Z ##[group]Installed versions
+2025-06-18T10:00:38.2556640Z Successfully set up CPython (3.9.23)
+2025-06-18T10:00:38.2558229Z ##[endgroup]

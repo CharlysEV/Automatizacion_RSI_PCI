@@ -1,0 +1,107 @@
+﻿2025-06-18T10:00:39.0796148Z ##[group]Run actions/checkout@v3
+2025-06-18T10:00:39.0797575Z with:
+2025-06-18T10:00:39.0798461Z   repository: CharlysEV/Automatizacion_RSI_PCI
+2025-06-18T10:00:39.0799966Z   token: ***
+2025-06-18T10:00:39.0800758Z   ssh-strict: true
+2025-06-18T10:00:39.0801606Z   persist-credentials: true
+2025-06-18T10:00:39.0802514Z   clean: true
+2025-06-18T10:00:39.0803342Z   sparse-checkout-cone-mode: true
+2025-06-18T10:00:39.0804352Z   fetch-depth: 1
+2025-06-18T10:00:39.0805298Z   fetch-tags: false
+2025-06-18T10:00:39.0806133Z   lfs: false
+2025-06-18T10:00:39.0806880Z   submodules: false
+2025-06-18T10:00:39.0807724Z   set-safe-directory: true
+2025-06-18T10:00:39.0808882Z ##[endgroup]
+2025-06-18T10:00:39.2640335Z Syncing repository: CharlysEV/Automatizacion_RSI_PCI
+2025-06-18T10:00:39.2643118Z ##[group]Getting Git version info
+2025-06-18T10:00:39.2644782Z Working directory is '/home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI'
+2025-06-18T10:00:39.2647301Z [command]/usr/bin/git version
+2025-06-18T10:00:39.2689243Z git version 2.49.0
+2025-06-18T10:00:39.2719816Z ##[endgroup]
+2025-06-18T10:00:39.2739413Z Temporarily overriding HOME='/home/runner/work/_temp/49a5eeee-c322-4018-96c3-39db61a82663' before making global git config changes
+2025-06-18T10:00:39.2742751Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-18T10:00:39.2745616Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI
+2025-06-18T10:00:39.2782255Z Deleting the contents of '/home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI'
+2025-06-18T10:00:39.2785703Z ##[group]Initializing the repository
+2025-06-18T10:00:39.2789343Z [command]/usr/bin/git init /home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI
+2025-06-18T10:00:39.2869230Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-18T10:00:39.2872573Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-18T10:00:39.2875693Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-18T10:00:39.2878094Z hint:
+2025-06-18T10:00:39.2879276Z hint: 	git config --global init.defaultBranch <name>
+2025-06-18T10:00:39.2880460Z hint:
+2025-06-18T10:00:39.2881542Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-18T10:00:39.2883824Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-18T10:00:39.2885672Z hint:
+2025-06-18T10:00:39.2886439Z hint: 	git branch -m <name>
+2025-06-18T10:00:39.2888723Z Initialized empty Git repository in /home/runner/work/Automatizacion_RSI_PCI/Automatizacion_RSI_PCI/.git/
+2025-06-18T10:00:39.2892472Z [command]/usr/bin/git remote add origin https://github.com/CharlysEV/Automatizacion_RSI_PCI
+2025-06-18T10:00:39.2927368Z ##[endgroup]
+2025-06-18T10:00:39.2928871Z ##[group]Disabling automatic garbage collection
+2025-06-18T10:00:39.2930651Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-18T10:00:39.2960500Z ##[endgroup]
+2025-06-18T10:00:39.2962801Z ##[group]Setting up auth
+2025-06-18T10:00:39.2967159Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-18T10:00:39.2999111Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-18T10:00:39.3299799Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-18T10:00:39.3331278Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-18T10:00:39.3566375Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-18T10:00:39.3600290Z ##[endgroup]
+2025-06-18T10:00:39.3601793Z ##[group]Fetching the repository
+2025-06-18T10:00:39.3609177Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +cd21ea4ed4ef938f2209d90243a3932ed562df42:refs/remotes/origin/main
+2025-06-18T10:00:39.7482836Z remote: Enumerating objects: 23, done.        
+2025-06-18T10:00:39.7484190Z remote: Counting objects:   4% (1/23)        
+2025-06-18T10:00:39.7485455Z remote: Counting objects:   8% (2/23)        
+2025-06-18T10:00:39.7486052Z remote: Counting objects:  13% (3/23)        
+2025-06-18T10:00:39.7486461Z remote: Counting objects:  17% (4/23)        
+2025-06-18T10:00:39.7486779Z remote: Counting objects:  21% (5/23)        
+2025-06-18T10:00:39.7487095Z remote: Counting objects:  26% (6/23)        
+2025-06-18T10:00:39.7487413Z remote: Counting objects:  30% (7/23)        
+2025-06-18T10:00:39.7487723Z remote: Counting objects:  34% (8/23)        
+2025-06-18T10:00:39.7488040Z remote: Counting objects:  39% (9/23)        
+2025-06-18T10:00:39.7488400Z remote: Counting objects:  43% (10/23)        
+2025-06-18T10:00:39.7488740Z remote: Counting objects:  47% (11/23)        
+2025-06-18T10:00:39.7489064Z remote: Counting objects:  52% (12/23)        
+2025-06-18T10:00:39.7489379Z remote: Counting objects:  56% (13/23)        
+2025-06-18T10:00:39.7489695Z remote: Counting objects:  60% (14/23)        
+2025-06-18T10:00:39.7490023Z remote: Counting objects:  65% (15/23)        
+2025-06-18T10:00:39.7490339Z remote: Counting objects:  69% (16/23)        
+2025-06-18T10:00:39.7490656Z remote: Counting objects:  73% (17/23)        
+2025-06-18T10:00:39.7490977Z remote: Counting objects:  78% (18/23)        
+2025-06-18T10:00:39.7491300Z remote: Counting objects:  82% (19/23)        
+2025-06-18T10:00:39.7491613Z remote: Counting objects:  86% (20/23)        
+2025-06-18T10:00:39.7491930Z remote: Counting objects:  91% (21/23)        
+2025-06-18T10:00:39.7492240Z remote: Counting objects:  95% (22/23)        
+2025-06-18T10:00:39.7492851Z remote: Counting objects: 100% (23/23)        
+2025-06-18T10:00:39.7493185Z remote: Counting objects: 100% (23/23), done.        
+2025-06-18T10:00:39.7493548Z remote: Compressing objects:   5% (1/17)        
+2025-06-18T10:00:39.7493885Z remote: Compressing objects:  11% (2/17)        
+2025-06-18T10:00:39.7494209Z remote: Compressing objects:  17% (3/17)        
+2025-06-18T10:00:39.7494533Z remote: Compressing objects:  23% (4/17)        
+2025-06-18T10:00:39.7494911Z remote: Compressing objects:  29% (5/17)        
+2025-06-18T10:00:39.7495602Z remote: Compressing objects:  35% (6/17)        
+2025-06-18T10:00:39.7495941Z remote: Compressing objects:  41% (7/17)        
+2025-06-18T10:00:39.7496271Z remote: Compressing objects:  47% (8/17)        
+2025-06-18T10:00:39.7496617Z remote: Compressing objects:  52% (9/17)        
+2025-06-18T10:00:39.7496957Z remote: Compressing objects:  58% (10/17)        
+2025-06-18T10:00:39.7497293Z remote: Compressing objects:  64% (11/17)        
+2025-06-18T10:00:39.7497675Z remote: Compressing objects:  70% (12/17)        
+2025-06-18T10:00:39.7498245Z remote: Compressing objects:  76% (13/17)        
+2025-06-18T10:00:39.7498602Z remote: Compressing objects:  82% (14/17)        
+2025-06-18T10:00:39.7498998Z remote: Compressing objects:  88% (15/17)        
+2025-06-18T10:00:39.7499349Z remote: Compressing objects:  94% (16/17)        
+2025-06-18T10:00:39.7499701Z remote: Compressing objects: 100% (17/17)        
+2025-06-18T10:00:39.7500046Z remote: Compressing objects: 100% (17/17), done.        
+2025-06-18T10:00:39.7683371Z remote: Total 23 (delta 0), reused 22 (delta 0), pack-reused 0 (from 0)        
+2025-06-18T10:00:39.7776926Z From https://github.com/CharlysEV/Automatizacion_RSI_PCI
+2025-06-18T10:00:39.7777727Z  * [new ref]         cd21ea4ed4ef938f2209d90243a3932ed562df42 -> origin/main
+2025-06-18T10:00:39.7807477Z ##[endgroup]
+2025-06-18T10:00:39.7808241Z ##[group]Determining the checkout info
+2025-06-18T10:00:39.7810401Z ##[endgroup]
+2025-06-18T10:00:39.7811155Z ##[group]Checking out the ref
+2025-06-18T10:00:39.7815424Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-06-18T10:00:39.7866618Z Switched to a new branch 'main'
+2025-06-18T10:00:39.7869244Z branch 'main' set up to track 'origin/main'.
+2025-06-18T10:00:39.7875793Z ##[endgroup]
+2025-06-18T10:00:39.7909896Z [command]/usr/bin/git log -1 --format='%H'
+2025-06-18T10:00:39.7931959Z 'cd21ea4ed4ef938f2209d90243a3932ed562df42'
