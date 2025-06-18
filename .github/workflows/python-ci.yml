@@ -7,14 +7,14 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    strategy:
+  test:                           # ← 2 espacios antes de 'test'
+    runs-on: ubuntu-latest        # ← 4 espacios antes de 'runs-on'
+    strategy:                     # ← 4 espacios antes de 'strategy'
       matrix:
         python-version: [3.8, 3.9, 3.10, 3.11]
 
-    steps:
-      - name: Checkout code
+    steps:                        # ← 4 espacios antes de 'steps'
+      - name: Checkout code       # ← 6 espacios antes de '- name'
         uses: actions/checkout@v3
 
       - name: Set up Python
