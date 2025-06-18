@@ -1,6 +1,25 @@
-[tool.black]
-line-length = 88
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
 
-[tool.flake8]
-max-line-length = 88
-extend-ignore = E203
+[project]
+name = "pci_rsi_sugeridor"
+version = "0.1.0"
+description = "CLI y librería para sugerir asignaciones de PCI/RSI ZN-ZR con pool virtual"
+authors = [
+  { name = "Carlos Álvarez Corredor", email = "carlos.alvarez@circet.es" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "pandas>=1.0",
+  "openpyxl>=3.0",
+  "tabulate>=0.8",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "black>=22.0",
+  "flake8>=4.0",
+]
