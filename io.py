@@ -2,24 +2,24 @@
 # io.py: Módulo de I/O y CLI
 
 import argparse
+import logging
 import os
 import sys
-import logging
 from datetime import datetime
 
 import pandas as pd
 
 from core import (
+    agrupar_tech,
     cargar_y_preprocesar_pci,
     cargar_y_preprocesar_rsi_5g,
-    preprocesar_TACAreas,
-    masivo_OSP_VDF,
-    sugerir_pci_rsi,
-    planificar_lnr700,
     detectar_numero_sectores,
     ensure_csv,
+    masivo_OSP_VDF,
     normaliza_banda,
-    agrupar_tech,
+    planificar_lnr700,
+    preprocesar_TACAreas,
+    sugerir_pci_rsi,
 )
 
 VERSION = "3.9"

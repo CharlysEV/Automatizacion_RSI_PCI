@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # setup.py — Instalación y metadata del package
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
     name="pci_rsi_sugeridor",

@@ -1,10 +1,11 @@
-import pytest
 import pandas as pd
+import pytest
+
 from core import (
+    ClusterAllocator,
     serie_a_enteros_multi,
     sugerir_consecutivos_mod3,
     sugerir_rsi_con_sep,
-    ClusterAllocator,
 )
 
 

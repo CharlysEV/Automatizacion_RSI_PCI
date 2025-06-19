@@ -1,5 +1,6 @@
 import pytest
-from core import normaliza_banda, agrupar_tech
+
+from core import agrupar_tech, normaliza_banda
 
 
 @pytest.mark.parametrize(
