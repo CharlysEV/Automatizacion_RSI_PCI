@@ -12,7 +12,6 @@ setup(
         # "requests>=2.25.1",
     ],
     # ...dentro del fichero setup.py...
-
     extras_require={
         "dev": [
             "pytest",
@@ -29,8 +28,7 @@ setup(
             "types-setuptools",
         ],
     },
-
-# ...resto del fichero...
+    # ...resto del fichero...
     entry_points={
         "console_scripts": [
             # Asume que pci_rsi_sugeridor/io.py define una función main()
