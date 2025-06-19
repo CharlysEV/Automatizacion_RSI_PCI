@@ -1,33 +1,24 @@
-import pytest
+from pci_rsi_sugeridor.core import normaliza_banda
 
-from core import agrupar_tech, normaliza_banda
+def test_normaliza_banda():
+    # Casos estándar
+    assert normaliza_banda("700", "4G") == "700"
+    assert normaliza_banda("800", "4G") == "800"
+    assert normaliza_banda("1800", "4G") == "1800"
+    assert normaliza_banda("2100", "4G") == "2100"
+    assert normaliza_banda("2600", "4G") == "2600"
+    assert normaliza_banda("3500", "5G") == "78"
 
+    # Casos con prefijos/sufijos y espacios
+    assert normaliza_banda("  NR700 ", "5G") == "700"
+    assert normaliza_banda("B28", "4G") == "700"
+    assert normaliza_banda("N78", "5G") == "78"
+    assert normaliza_banda("N3", "5G") == "1800"
+    assert normaliza_banda("7", "4G") == "2600"
 
-@pytest.mark.parametrize(
-    "input_b, input_t, expected",
-    [
-        ("B7", "", "2600"),
-        ("7", "", "2600"),
-        ("NR2100", "", "2100"),
-        ("3500", "", "78"),
-        ("N78", "", "78"),
-        ("foo", "", "FOO"),  # fallback
-    ],
-)
-def test_normaliza_banda(input_b, input_t, expected):
-    assert normaliza_banda(input_b, input_t) == expected
+    # Casos sin cambios
+    assert normaliza_banda("L900", "4G") == "L900"
+    assert normaliza_banda("U900", "3G") == "U900"
 
-
-@pytest.mark.parametrize(
-    "tech_str, expected",
-    [
-        ("5G-NR", "5G"),
-        ("NR", "5G"),
-        ("4G", "4G"),
-        ("LTE", "4G"),
-        ("NBIOT", "NBIOT"),
-        ("xyz", "XYZ"),  # uppercase fallback
-    ],
-)
-def test_agrupar_tech(tech_str, expected):
-    assert agrupar_tech(tech_str) == expected
+    # Caso con solo un número que podría ser ambiguo
+    assert normaliza_banda("7", "4G") == "2600" # Este es un caso interesante

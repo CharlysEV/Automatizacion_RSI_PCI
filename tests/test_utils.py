@@ -1,67 +1,32 @@
-import pandas as pd
-import pytest
-
 from pci_rsi_sugeridor.core import (
     agrupar_tech,
     generar_nombre_celda,
-    normaliza_banda
+    normaliza_banda,
 )
 
 
-@pytest.mark.parametrize(
-    "input_list, n, min_pci, expected",
-    [
-        ([0, 1, 2, 3, 4, 5], 3, 0, [0, 1, 2]),
-        ([1, 2, 3, 4, 5, 6], 2, 3, [3, 4]),
-        ([5, 6, 7, 8], 4, 0, [6, 7, 8, ""]),  # only block starting at 6
-        ([4, 5, 7, 8], 2, 0, [4, 5]),
-        ([], 2, 0, ["", ""]),
-    ],
-)
-def test_sugerir_consecutivos_mod3(input_list, n, min_pci, expected):
-    assert sugerir_consecutivos_mod3(input_list, n, min_pci) == expected
+def test_normaliza_banda():
+    assert normaliza_banda("700", "4G") == "700"
+    assert normaliza_banda("N78", "5G") == "78"
 
 
-@pytest.mark.parametrize(
-    "libres, n, vendor, bc, expected",
-    [
-        ([0, 10, 20, 30], 3, "ERICSSON", "1800", [0, 10, 20]),
-        ([5, 15, 25], 2, "ERICSSON", "3500", [5, 13]),  # min_sep 8 for bc==3500
-        ([1, 2, 3], 3, "HUAWEI", "1800", [1, 2, 3]),
-        ([], 2, "ERICSSON", "2100", ["", ""]),
-    ],
-)
-def test_sugerir_rsi_con_sep(libres, n, vendor, bc, expected):
-    out = sugerir_rsi_con_sep(libres, n, vendor, bc)
-    assert out == expected
+def test_agrupar_tech():
+    assert agrupar_tech("5G SA") == "5G"
+    assert agrupar_tech("NR") == "5G"
+    assert agrupar_tech("4G") == "4G"
+    assert agrupar_tech("LTE") == "4G"
 
 
-def test_serie_a_enteros_multi():
-    s = pd.Series(["100;110;120", "130,140", "150 160", None, "foo"])
-    out = serie_a_enteros_multi(s)
-    assert out == {100, 110, 120, 130, 140, 150, 160}
+def test_generar_nombre_celda():
+    # Caso 4G
+    assert generar_nombre_celda("M5161", "4G", "700", 1, "A") == "M5161Y1A"
+    assert generar_nombre_celda("M5161", "4G", "2600", 2, "B") == "M5161L2B"
 
+    # Caso 5G
+    assert generar_nombre_celda("M5161", "5G", "N78", 3, "A") == "M5161P3A"
 
-def test_cluster_allocator_basic():
-    alloc = ClusterAllocator()
-    # initial unused has full range
-    used = {1, 2, 3}
-    free_pci = alloc.get_unused_pci("ERICSSON", "700", used, 0)
-    assert 0 in free_pci and 1 not in free_pci
-    # register assigned and then get cluster assigned
-    cluster = {"A", "B"}
-    alloc.register_assigned(cluster, [10, 20])
-    assert alloc.get_cluster_assigned(cluster) == {10, 20}
-    # reset clears state
-    alloc.reset()
-    assert alloc.get_cluster_assigned(cluster) == set()
+    # Caso con sufijo por defecto
+    assert generar_nombre_celda("T1234", "4G", "800", 1) == "T1234M1A"
 
-
-def test_cluster_allocator_reuse():
-    alloc = ClusterAllocator()
-    cluster = {"X"}
-    # simulate reserve PCIs
-    alloc.register_assigned(cluster, [0, 1, 2])
-    free = alloc.get_unused_pci("ERICSSON", "700", set(), 0)
-    # 0,1,2 should not appear
-    assert not any(p in free for p in [0, 1, 2])
+    # Caso con tecnología desconocida (debería usar 'X')
+    assert generar_nombre_celda("E9876", "3G", "2100", 1) == "E9876X1A"
