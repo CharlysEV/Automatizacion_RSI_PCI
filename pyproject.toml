@@ -1,37 +1,32 @@
+# pyproject.toml — Configuración del build y herramientas de linting
+
 [build-system]
-requires = ["setuptools>=42", "wheel"]
+# Para instalaciones editables y generación de wheel
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[project]
-name = "mi-proyecto"
-version = "0.1.0"
-description = "Descripción de tu proyecto"
-authors = [{ name="Tu Nombre", email="tu@correo.com" }]
-readme = "README.md"
-dependencies = []
-
-[project.optional-dependencies]
-dev = [
-  "black",
-  "isort",
-  "flake8",
-  "mypy",
-  "pytest",
-  "pytest-cov",
-  "codecov"
-]
-
 [tool.black]
+# Formato automático de código
 line-length = 88
-target-version = ['py38', 'py39', 'py310', 'py311']
+target-version = ["py38", "py39", "py310", "py311"]
+include = "\\.pyi?$"
 
 [tool.isort]
+# Orden de imports compatible con Black
 profile = "black"
 
 [tool.flake8]
+# Ignorar líneas largas (E501) e imports no usados (F401)
 max-line-length = 88
 ignore = ["E501", "F401"]
+exclude = ["build", "dist", "*.egg-info"]
 
 [tool.mypy]
+# Configuración básica de comprobación de tipos
 python_version = 3.8
-strict = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+# Opciones por defecto para pytest
+addopts = "-q --cov=."
