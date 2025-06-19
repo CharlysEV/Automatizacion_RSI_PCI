@@ -16,9 +16,9 @@ def test_normaliza_banda():
     assert normaliza_banda("N3", "5G") == "1800"
     assert normaliza_banda("7", "4G") == "2600"
 
-    # Casos sin cambios
-    assert normaliza_banda("L900", "4G") == "L900"
-    assert normaliza_banda("U900", "3G") == "U900"
+    # Casos que extraen solo el número
+    assert normaliza_banda("L900", "4G") == "900"
+    assert normaliza_banda("U900", "3G") == "900"
 
     # Caso con solo un número que podría ser ambiguo
-    assert normaliza_banda("7", "4G") == "2600" # Este es un caso interesante
+    assert normaliza_banda("7", "4G") == "2600"
