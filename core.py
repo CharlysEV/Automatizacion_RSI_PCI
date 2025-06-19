@@ -295,7 +295,7 @@ def sugerir_rsi_con_sep(libres: list, n: int, vendor: str, bc: str) -> list:
 def cargar_y_preprocesar_pci(csv_pci_path: str) -> pd.DataFrame:
     sep = detect_separator(csv_pci_path)
     df = pd.read_csv(
-        csv_pci_path, dtype=str, sep=sep, encoding="utf-8", error_bad_lines=False
+    csv_pci_path, dtype=str, sep=sep, encoding="utf-8", error_bad_lines=False
     )
     df = map_column_names(df)
     if "SITE" not in df.columns:
@@ -315,8 +315,8 @@ def cargar_y_preprocesar_rsi_5g(
     sep = detect_separator(csv_rsi_path)
     try:
         df = pd.read_csv(
-            csv_rsi_path, dtype=str, sep=sep, encoding="utf-8", error_bad_lines=False
-        )
+    csv_rsi_path, dtype=str, sep=sep, encoding="utf-8", error_bad_lines=False
+    )
     except FileNotFoundError:
         return pd.DataFrame()
     df = map_column_names(df)
@@ -510,11 +510,11 @@ def masivo_OSP_VDF(
     tac_a_vecinos: dict,
 ) -> None:
     df_req = pd.read_csv(
-        ensure_csv(entrada_osp),
-        dtype=str,
-        sep=detect_separator(entrada_osp),
-        encoding="utf-8",
-        error_bad_lines=False,
+    ensure_csv(entrada_osp),
+    dtype=str,
+    sep=detect_separator(entrada_osp),
+    encoding="utf-8",
+    error_bad_lines=False,
     )
     df_req = map_peticion_columns(df_req)
     df_req["BAND_CLEAN"] = df_req.apply(
