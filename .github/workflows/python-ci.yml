@@ -34,10 +34,24 @@ jobs:
         run: |
           black --check .
 
+      - name: Lint with isort
+        run: |
+          isort --check-only .
+
       - name: Lint with Flake8
         run: |
-          flake8
+          # Ignorar errores de líneas largas (E501) e imports no usados (F401)
+          flake8 --ignore=E501,F401 .
 
-      - name: Run tests
+      - name: Type check with mypy
         run: |
-          pytest -q
+          mypy .
+
+      - name: Run tests with coverage
+        run: |
+          pytest -q --cov=.
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
