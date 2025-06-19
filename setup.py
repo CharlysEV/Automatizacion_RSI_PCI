@@ -1,31 +1,30 @@
 #!/usr/bin/env python3
-# setup.py — Instalación y package metadata
+# setup.py — Instalación y metadata del package
 
 from setuptools import setup, find_packages
 
 setup(
     name="pci_rsi_sugeridor",
     version="0.1.0",
-    description="CLI y librería para sugerir asignaciones de PCI/RSI ZN-ZR con pool virtual",
-    author="Carlos Álvarez Corredor",
-    author_email="carlos.alvarez@circet.es",
-    url="https://github.com/CharlysEV/Automatizacion_RSI_PCI",
-    packages=find_packages(exclude=["tests", ".github", "venv*"]),
+    packages=find_packages(),
     install_requires=[
-        "pandas>=1.0",
-        "openpyxl>=3.0",
-        "tabulate>=0.8",
+        # aquí van tus dependencias runtime, p.ej.:
+        # "requests>=2.25.1",
     ],
     extras_require={
         "dev": [
-            "pytest>=7.0",
-            "black>=22.0",
-            "flake8>=4.0",
-        ]
+            "pytest",
+            "coverage",
+            "flake8",
+            "black",
+            "isort",
+            "mypy",
+            "codecov",
+        ],
     },
     entry_points={
         "console_scripts": [
-            # Asume que tu io.py define una función main() que lanza el CLI
+            # Asume que pci_rsi_sugeridor/io.py define una función main()
             "pci-rsi=pci_rsi_sugeridor.io:main",
         ],
     },
