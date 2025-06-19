@@ -11,6 +11,8 @@ setup(
         # aquí van tus dependencias runtime, p.ej.:
         # "requests>=2.25.1",
     ],
+    # ...dentro del fichero setup.py...
+
     extras_require={
         "dev": [
             "pytest",
@@ -20,14 +22,15 @@ setup(
             "isort",
             "mypy",
             "codecov",
-            # --- AÑADE ESTAS LÍNEAS ---
+            # AÑADIR ESTAS LÍNEAS PARA LOS TIPOS
             "pandas-stubs",
             "types-openpyxl",
             "types-tabulate",
             "types-setuptools",
-            # -------------------------
         ],
     },
+
+# ...resto del fichero...
     entry_points={
         "console_scripts": [
             # Asume que pci_rsi_sugeridor/io.py define una función main()
