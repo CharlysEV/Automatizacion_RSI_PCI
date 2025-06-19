@@ -53,3 +53,5 @@ env/
 
 # Salidas generadas por tu script
 salida/
+
+*.egg-info/

@@ -1,8 +1,0 @@
-pandas>=1.0
-openpyxl>=3.0
-tabulate>=0.8
-
-[dev]
-pytest>=7.0
-black>=22.0
-flake8>=4.0
