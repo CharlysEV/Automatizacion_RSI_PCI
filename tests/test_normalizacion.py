@@ -1,5 +1,6 @@
 from pci_rsi_sugeridor.core import normaliza_banda
 
+
 def test_normaliza_banda():
     # Casos estándar
     assert normaliza_banda("700", "4G") == "700"
