@@ -4,6 +4,7 @@
 import os
 import re
 from datetime import datetime
+from typing import Tuple 
 
 import openpyxl
 import pandas as pd
@@ -334,7 +335,7 @@ def preprocesar_TACAreas(xlsx_path: str = "TACAreas.xlsx") -> dict:
     except FileNotFoundError:
         return {}
     ws = wb.active
-    tac_a_vecinos = {}
+    tac_a_vecinos: dict[str, set] = {}
     for row in ws.iter_rows(min_row=2, values_only=True):
         tac = str(row[1]).strip() if row[1] else None
         vec = str(row[2]).strip() if row[2] else None
@@ -364,7 +365,7 @@ def sugerir_pci_rsi(
     modo_r: bool,
     allocator=None,
     coord_pcis=None,
-) -> tuple[list, list]:
+) -> Tuple[list, list]:
     if allocator is None:
         allocator = ClusterAllocator()
 
@@ -460,7 +461,7 @@ def planificar_lnr700(
     min_rsi: int,
     modo_r: bool,
     manual_cache: dict,
-) -> tuple[list, list, list, list]:
+) -> Tuple[list, list, list, list]:
     allocator = ClusterAllocator()
     res4, det4 = sugerir_pci_rsi(
         site,
