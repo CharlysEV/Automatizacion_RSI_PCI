@@ -38,13 +38,9 @@ jobs:
         run: |
           isort --check-only .
 
+      - name: Lint with Flake8
         run: |
-        # Flake8 leerá la configuración desde los ficheros del proyecto (.flake8, pyproject.toml)
-          flake8 .
-
-      - name: Lint with Flake8  # <-- AÑADE ESTA LÍNEA
-        run: |
-       # Flake8 leerá la configuración desde los ficheros del proyecto (.flake8, pyproject.toml)
+          # Flake8 leerá la configuración desde los ficheros del proyecto (.flake8, pyproject.toml)
           flake8 .
 
       - name: Type check with mypy
