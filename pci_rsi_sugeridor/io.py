@@ -8,7 +8,6 @@ import sys
 from datetime import datetime
 
 import pandas as pd
-
 from core import (
     agrupar_tech,
     cargar_y_preprocesar_pci,
