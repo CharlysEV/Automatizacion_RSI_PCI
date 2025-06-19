@@ -12,22 +12,22 @@ setup(
         # "requests>=2.25.1",
     ],
     extras_require={
-    "dev": [
-        "pytest",
-        "coverage",
-        "flake8",
-        "black",
-        "isort",
-        "mypy",
-        "codecov",
-        # --- AÑADE ESTAS LÍNEAS ---
-        "pandas-stubs",
-        "types-openpyxl",
-        "types-tabulate",
-        "types-setuptools",
-        # -------------------------
-    ],
-},
+        "dev": [
+            "pytest",
+            "coverage",
+            "flake8",
+            "black",
+            "isort",
+            "mypy",
+            "codecov",
+            # --- AÑADE ESTAS LÍNEAS ---
+            "pandas-stubs",
+            "types-openpyxl",
+            "types-tabulate",
+            "types-setuptools",
+            # -------------------------
+        ],
+    },
     entry_points={
         "console_scripts": [
             # Asume que pci_rsi_sugeridor/io.py define una función main()

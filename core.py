@@ -4,7 +4,7 @@
 import os
 import re
 from datetime import datetime
-from typing import Tuple 
+from typing import Tuple
 
 import openpyxl
 import pandas as pd
