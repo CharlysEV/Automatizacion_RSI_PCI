@@ -38,10 +38,9 @@ jobs:
         run: |
           isort --check-only .
 
-      - name: Lint with Flake8
         run: |
-          # Ignorar errores de líneas largas (E501) e imports no usados (F401)
-          flake8 --ignore=E501,F401 .
+        # Flake8 leerá la configuración desde los ficheros del proyecto (.flake8, pyproject.toml)
+          flake8 .
 
       - name: Type check with mypy
         run: |
