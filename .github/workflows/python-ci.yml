@@ -42,6 +42,11 @@ jobs:
         # Flake8 leerá la configuración desde los ficheros del proyecto (.flake8, pyproject.toml)
           flake8 .
 
+      - name: Lint with Flake8  # <-- AÑADE ESTA LÍNEA
+        run: |
+       # Flake8 leerá la configuración desde los ficheros del proyecto (.flake8, pyproject.toml)
+          flake8 .
+
       - name: Type check with mypy
         run: |
           mypy .
