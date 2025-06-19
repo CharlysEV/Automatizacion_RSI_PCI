@@ -1,3 +1,6 @@
 [flake8]
-max-line-length = 100
-extend-ignore = E501,F401
+max-line-length = 88
+ignore = 
+    E501,  # líneas largas
+    F401,  # imports no usados
+    W503   # line break before binary operator (Black prefiere W503)
